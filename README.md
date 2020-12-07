@@ -5,6 +5,8 @@ Little script to trigger a command only if some files of certain extensions have
 ## Usage
 
 ```bash
+$> npx git_on_change --help
+
 Usage: git_on_change [options] [command]
 
 Options:
