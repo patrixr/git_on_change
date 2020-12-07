@@ -20,6 +20,6 @@ Commands:
 
     Examples:
 
-    $> git_on_change --extensions JS   "echo 'Some JS files were changed'"
-    $> git_on_change --extensions -JS  "echo 'No JS files were changed'"
+    $> git_on_change --extensions "JS"   run "echo Some JS files were changed"
+    $> git_on_change --extensions "-JS"  run "echo No JS files were changed"
 ```
