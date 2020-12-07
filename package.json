@@ -1,0 +1,15 @@
+{
+  "name": "git_on_change",
+  "version": "1.0.1",
+  "description": "",
+  "private": false,
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "git_on_change": "./cli.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
