@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+process.env.DEBUG = "*"
+
 const { execSync, spawnSync }   = require('child_process');
 const { program }               = require('commander');
 const debug                     = require('debug')
@@ -24,7 +26,6 @@ program
   .option('-e, --extensions <extensions>', 'comma separated list of extensions', commaSplit)
   .command('run <cmd>')
   .action((commandToRun) => {
-    console.log(program.extensions)
     const extensions  = program.extensions || [];
     const files       = execSync(`git --no-pager diff --name-only HEAD HEAD~1`).toString().split('\n');
     const changes     = files.reduce((arr, f) => {
