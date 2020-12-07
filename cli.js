@@ -47,7 +47,8 @@ program
 
     if (shouldTrigger) {
       info(`Running ${commandToRun}`)
-      const { status } = spawnSync(commandToRun, { stdio: 'inherit' });
+      const [cmd, ...args] = commandToRun.split(' ');
+      const { status } = spawnSync(cmd, args, { stdio: 'inherit' });
       exit(status === null ? 1 : status);
     }
 
